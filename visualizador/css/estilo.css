@@ -45,3 +45,30 @@ table tr:last-child td {
     font-weight: bold;
     font-size: 2em;
 }
+
+table td:first-child tr{
+    background-color: rgb(255, 255, 255) !important ;
+    border: none;
+    border-left: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+table td:first-child  {
+    background: #ffffff !important ;
+    border: none;
+    border-left: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+table td:last-child  {
+    background: #ffffff !important ;
+    border: none;
+    border-left: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
