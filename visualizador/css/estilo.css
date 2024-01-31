@@ -4,6 +4,7 @@ table {
     border: 1px solid;
     border-top: none;
     border: none;
+    display: inline;
 }
 
 tr {
@@ -71,4 +72,32 @@ table td:last-child  {
     text-align: center;
     font-weight: bold;
     font-size: 2em;
+}
+
+div{
+    display: inline;
+}
+
+select{
+    font-size: 2em;
+}
+
+textarea{
+    left: 800px;
+    position: absolute;
+    margin-top: 150px;
+}
+
+.button1{
+    font-size: 2em;
+    position: absolute;
+    margin-top: 650px;
+    left: 800px;
+}
+
+.button2{
+    font-size: 2em;
+    position: absolute;
+    margin-top: 650px;
+    left: 1000px;
 }

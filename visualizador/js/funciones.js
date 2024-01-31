@@ -48,3 +48,22 @@ function iniciar(){
     celdas.rows[8].cells[5].style = "background-image: url(./img/ReinaB.png); background-size:cover;";
     celdas.rows[1].cells[5].style = "background-image: url(./img/ReinaN.png); background-size:cover;";
 }
+
+function partidas(){
+    var textarea = document.getElementById("texto");
+    var valor = document.getElementById("Combo").value;
+    
+    switch(valor) {
+        case "1":
+        textarea.value = "Partida 1";
+          break;
+        case "2":
+        textarea.value = "Partida 2";
+          break;
+        case "3":
+        textarea.value = "Partida 3";
+          break;
+        default:
+          break;
+      }
+}
