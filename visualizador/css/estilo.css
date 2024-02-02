@@ -86,6 +86,8 @@ textarea{
     left: 800px;
     position: absolute;
     margin-top: 150px;
+    font-size: 2em;
+    resize: none;
 }
 
 .button1{
@@ -100,4 +102,11 @@ textarea{
     position: absolute;
     margin-top: 650px;
     left: 1000px;
+}
+
+.button3{
+    font-size: 2em;
+    position: absolute;
+    margin-top: 650px;
+    left: 1155px;
 }

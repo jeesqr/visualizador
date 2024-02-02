@@ -54,16 +54,19 @@ function partidas(){
     var valor = document.getElementById("Combo").value;
     
     switch(valor) {
-        case "1":
+      case "0":
+        textarea.value = "";
+        break;
+      case "1":
         textarea.value = "Partida 1";
-          break;
-        case "2":
+        break;
+      case "2":
         textarea.value = "Partida 2";
-          break;
-        case "3":
+        break;
+      case "3":
         textarea.value = "Partida 3";
-          break;
-        default:
-          break;
+        break;
+      default:
+        break;
       }
 }
