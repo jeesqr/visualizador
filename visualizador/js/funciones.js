@@ -85,9 +85,8 @@ function cargarPartida(){
 }
 
 function pasoApaso(){
-
-  var celdas = document.getElementById("Tablero");
-  celdas.rows[2].cells[1].style = "background-image: none; background-size:cover;";
+  var celdas = document.getElementById("texto").value;
+  /*celdas.rows[2].cells[1].style = "background-image: none; background-size:cover;";
   celdas.rows[3].cells[1].style = "background-image: url(./img/PeonN.png); background-size:cover;";
   switch(contadorPaso){
     case 0:
@@ -99,5 +98,23 @@ function pasoApaso(){
       celdas.rows[3].cells[2].style = "background-image: url(./img/PeonN.png); background-size:cover;";
       break;
   }
-  contadorPaso++;
+  contadorPaso++;*/
+
+  var lineas = celdas.split('\n');
+  for(let i = 0; i < lineas.length; i++) {
+    //alert(lineas[i]);
+    var tokens = lineas[i].split(' ');
+    for(let j = 1; j < tokens.length; j++) {
+      //alert(tokens[j]);
+      //alert(tieneMayusculas(tokens[j]));
+      if (!tieneMayusculas(tokens[j])) {
+        alert("Si soy un Peon y me moví a "+tokens[j]);
+      }
+    }
+  }
+
+  function tieneMayusculas(cadena) {
+    return /[A-Z]/.test(cadena);
+  }
+
 }
