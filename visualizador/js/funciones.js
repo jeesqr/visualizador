@@ -100,6 +100,7 @@ function pasoApaso(){
   }
   contadorPaso++;*/
 
+  var tabla = document.getElementById("Tablero");
   var lineas = celdas.split('\n');
   for(let i = 0; i < lineas.length; i++) {
     //alert(lineas[i]);
@@ -108,7 +109,14 @@ function pasoApaso(){
       //alert(tokens[j]);
       //alert(tieneMayusculas(tokens[j]));
       if (!tieneMayusculas(tokens[j])) {
-        alert("Si soy un Peon y me moví a "+tokens[j]);
+        //alert("Si soy un Peon y me moví a "+tokens[j]);
+        var posicion = tokens[j].split(/(\d+)/);
+        //El usar alert no se recomienda porque no puedes hacer nada en la página, se recomienda usar el console.log
+        console.log("Columna "+convertirLetraNumero(posicion[0])+ " renglon "+ posicion[1]);
+        var columna = parseInt(convertirLetraNumero(posicion[0]));
+        var renglon = parseInt(posicion[1])
+        tabla.rows[renglon].cells[columna].style = "background-image: url(./img/PeonN.png); background-size:cover;";
+        setTimeout(console.log(""), 3000);
       }
     }
   }
@@ -117,4 +125,25 @@ function pasoApaso(){
     return /[A-Z]/.test(cadena);
   }
 
+}
+
+function convertirLetraNumero(letra){
+  switch (letra) {
+    case 'a':return 0;break;
+  
+    case 'b':return 1;break;
+
+    case 'c':return 2;break;
+
+    case 'd':return 3;break;
+
+    case 'e':return 4;break;
+
+    case 'f':return 5;break;
+
+    case 'g':return 6;break;
+
+    case 'h':return 7;break;
+  }
+  
 }
